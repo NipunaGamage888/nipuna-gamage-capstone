@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list{
+       list-style-type: none;
+       display: flex;
+    }
+    &__li{
+        text-decoration: none;
+    }
+    &__user-logged{
+        display: none;
+    }
+}
