@@ -69,10 +69,15 @@ payment page
 ### Mockups
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
+## Homepage
 ![](./assets/Home.png)
+## Loginpage
 ![](./assets/LoginUser.png)
+## signin page
 ![](./assets/Register.png)
+## Resgister parking space
 ![](./assets/Registerparkingspace.png)
+## Booknow page
 ![](./assets/Booknowpage.png)
 
 ### Data
