@@ -35,7 +35,7 @@ List the functionality that your app will include. These can be written as user 
 
 List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
 
- -React
+- React
 - Javascript
 - MySQL
 - Express
