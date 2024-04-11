@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Header.scss";
+import Booking from "../BookingSec/Booking";
 
 function Header() {
   const [userLoggedIn, setIsUserLoggedIn] = useState(true);
@@ -23,6 +24,7 @@ function Header() {
           </li>
         </ul>
       </nav>
+      <Booking/>
     </header>
   );
 }
