@@ -2,6 +2,8 @@ import React from "react";
 import mainImage from "../../assets/mainImage.jpg";
 import Header from "../Header/Header";
 import "./Main.scss";
+import Book from "../Book/Book";
+import Card from "../Cards/Card";
 
 function Main() {
   return (
@@ -10,7 +12,7 @@ function Main() {
         <img className="combine__image" src={mainImage} />
       </div>
       <div>
-        <Header/>
+        <Header />
       </div>
       <div className="combine__desc-sec">
         <p className="combine__welcome">welcome to</p>
@@ -21,7 +23,12 @@ function Main() {
           experience.
         </p>
       </div>
-      
+      <div className="combine__book">
+        <Book />
+        <div>
+            <Card/>
+        </div>
+      </div>
     </main>
   );
 }
