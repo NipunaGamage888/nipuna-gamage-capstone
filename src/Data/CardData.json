@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "heading": "Attendance For support",
+      "imageUrl": "image1.jpg",
+      "paragraphs1": "This is the first paragraph of card 1.",
+      "paragraph2":"This is the second paragraph of card 1."
+        
+      
+    },
+    {
+      "id": 2,
+      "heading": "Trained security professional for Anti Theft",
+      "imageUrl": "image2.jpg",
+      "paragraphs1": "This is the first paragraph of card 1.",
+      "paragraph2":"This is the second paragraph of card 1."
+        
+    },
+    {
+        "id": 3,
+        "heading": "spacious Parking",
+        "imageUrl": "image2.jpg",
+        "paragraphs1": "This is the first paragraph of card 1.",
+        "paragraph2":"This is the second paragraph of card 1."
+          
+      },
+      {
+        "id": 4,
+        "heading": "Mechanical Support when needed",
+        "imageUrl": "image2.jpg",
+        "paragraphs1": "This is the first paragraph of card 1.",
+        "paragraph2":"This is the second paragraph of card 1."
+          
+      },
+      {
+        "id": 5,
+        "heading": "Secure Payment Methods",
+        "imageUrl": "image2.jpg",
+        "paragraphs1": "This is the first paragraph of card 1.",
+        "paragraph2":"This is the second paragraph of card 1."
+          
+      }
+  ]
+  
