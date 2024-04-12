@@ -23,10 +23,12 @@ function Main() {
           experience.
         </p>
       </div>
-      <div className="combine__book">
-        <Book />
-        <div>
-            <Card/>
+      <div className="combine__background">
+        <div className="combine__book">
+          <Book />
+          <div className="combine__cards-back">
+            <Card />
+          </div>
         </div>
       </div>
     </main>

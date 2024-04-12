@@ -39,14 +39,25 @@
     color: #aeadad;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   }
-  &__detail{
+  &__detail {
     font-size: 1.5rem;
     font-weight: 400;
     color: #9b9b9b;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   }
-  &__book{
+  &__book {
     position: relative;
-    top: 20rem;
+    top: -8rem;
+    
+    
+  }
+  &__background{
+    position: relative;
+    top: 31rem;
+    background-image: url("../../assets//aboutUsBack.avif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
   }
 }
