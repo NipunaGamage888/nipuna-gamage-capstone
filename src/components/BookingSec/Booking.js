@@ -1,63 +1,83 @@
 import React, { useState } from "react";
 import axios from "axios";
-import './Booking.scss'
+import "./Booking.scss";
 
 function Booking() {
   const [address, setAddress] = useState("");
   const [parkingLots, setParkingLots] = useState([]);
+  const [error, setError] = useState(null);
   const submitAddress = async (event) => {
     event.preventDefault();
+
+    if (!address) {
+      setError("Please enter a valid address");
+      return;
+    }
     try {
       const result = await axios.get(
         `http://localhost:8081/api/parking/location/${address}`
       );
       console.log(result.data.nearbyParkingLots);
       setParkingLots(result.data.nearbyParkingLots);
+      setError(null);
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div>
-      return (
-      <section className="book">
-        <div className="book__main">
-          <h2 className="book__heading">Book Now</h2>
-          <p className="book__para">
-            At Parking Genie, we're committed to transforming the parking
-            experience. Our goal is simple: to make parking easier, more
-            convenient, and hassle-free. With our intuitive platform and
-            cutting-edge technology, finding and securing parking spaces becomes
-            a seamless process
-          </p>
-          <button  className="book__button">
-            Book Now
+    <section className="book-form">
+      <div className="book-form__main">
+        <h2 className="book-form__heading">Book Now</h2>
+        <form className="book-form__form">
+          <div className="book-form__input-sec">
+            <label className="book-form__label" htmlFor="location">
+              Select Location
+            </label>
+            <input
+              className="book-form__input"
+              id="location"
+              placeholder="address"
+              value={address}
+              type="text"
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </div>
+
+          <button
+            className="book-form__button"
+            type="submit"
+            onClick={submitAddress}
+          >
+            Search
           </button>
-        </div>
-      </section>
-      );
-      <form>
-        <input
-          placeholder="address"
-          value={address}
-          type="text"
-          onChange={(e) => setAddress(e.target.value)}
-        />
-        <button type="submit" onClick={submitAddress}>
-          Search
-        </button>
-      </form>
+        </form>
+        {error && <p className="book-form__error">{error}</p>}
+      </div>
       {parkingLots.length > 0 ? (
         parkingLots.map((parkingLot) => (
-          <section key={parkingLot.id}>
-            <p>{parkingLot.parking_name}</p>
+          <section className="book-form__available" key={parkingLot.id}>
+            <div>
+              <h2 className="book-form__info-heading">Parking Lot Name</h2>
+              <p className="book-form__info-para">{parkingLot.parking_name}</p>
+            </div>
+            <div>
+              <h2 className="book-form__info-heading">Parking Lot address</h2>
+              <p className="book-form__info-para">{parkingLot.address}</p>
+            </div>
+            <div>
+              <h2 className="book-form__info-heading">Parking Spaces</h2>
+              <p className="book-form__info-para">{parkingLot.parking_spaces}</p>
+            </div>
+            <div>
+              <button className="book-form__button">Book Now</button>
+            </div>
           </section>
         ))
       ) : (
         <p>No inventories Available in this warehouse</p>
       )}
-    </div>
+    </section>
   );
 }
 

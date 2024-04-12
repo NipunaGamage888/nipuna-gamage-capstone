@@ -1,5 +1,5 @@
 import React from "react";
-import mainImage from "../../assets/mainImage.jpg";
+import mainImage from "../../assets/mainImage.webp";
 import Header from "../Header/Header";
 import "./Main.scss";
 import Book from "../Book/Book";

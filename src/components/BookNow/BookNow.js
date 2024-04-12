@@ -1,7 +1,8 @@
 import React from 'react'
 import './BookNow.scss'
-import mainImage from "../../assets/mainImage.jpg";
+import mainImage from "../../assets/mainImage.webp";
 import Header from "../Header/Header";
+import Booking from '../BookingSec/Booking';
 
 function BookNow() {
   return (
@@ -23,7 +24,7 @@ function BookNow() {
       </div>
       <div className="book-now__background">
         <div className="book-now__book">
-          
+          <Booking/>
           <div className="book-now__cards-back">
 
           </div>

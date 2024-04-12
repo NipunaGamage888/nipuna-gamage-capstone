@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.scss";
-import mainImage from "../../assets/mainImage.jpg";
+import mainImage from "../../assets/mainImage.webp";
 import cardData from "../../Data/CardData.json";
 
 function Card() {
