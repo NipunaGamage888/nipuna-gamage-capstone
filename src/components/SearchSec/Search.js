@@ -29,7 +29,13 @@ function Booking() {
   };
 console.log(parkingLots)
   const booking=(parkingLot)=>{
-    navigate(`/register/${parkingLot}`)
+    const storedToken = localStorage.getItem("token");
+    if (!storedToken) {
+      navigate("/login"); 
+    }else{
+      navigate(`/register/${parkingLot}`)
+    }
+    
   }
 
   return (
