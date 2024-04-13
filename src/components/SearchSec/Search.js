@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Booking.scss";
+import "./Search.scss";
+import { useNavigate } from "react-router-dom";
 
 function Booking() {
   const [address, setAddress] = useState("");
   const [parkingLots, setParkingLots] = useState([]);
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate()
   const submitAddress = async (event) => {
     event.preventDefault();
 
@@ -17,13 +20,17 @@ function Booking() {
       const result = await axios.get(
         `http://localhost:8081/api/parking/location/${address}`
       );
-      console.log(result.data.nearbyParkingLots);
+     
       setParkingLots(result.data.nearbyParkingLots);
       setError(null);
     } catch (error) {
       console.error(error);
     }
   };
+console.log(parkingLots)
+  const booking=(parkingLot)=>{
+    navigate(`/register/${parkingLot}`)
+  }
 
   return (
     <section className="book-form">
@@ -70,7 +77,7 @@ function Booking() {
               <p className="book-form__info-para">{parkingLot.parking_spaces}</p>
             </div>
             <div>
-              <button className="book-form__button">Book Now</button>
+              <button onClick={()=>booking(parkingLot.id)} className="book-form__button">Book Now</button>
             </div>
           </section>
         ))

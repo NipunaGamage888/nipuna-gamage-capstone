@@ -2,7 +2,7 @@ import React from 'react'
 import './BookNow.scss'
 import mainImage from "../../assets/mainImage.webp";
 import Header from "../Header/Header";
-import Booking from '../BookingSec/Booking';
+import Search from '../SearchSec/Search';
 
 function BookNow() {
   return (
@@ -24,7 +24,7 @@ function BookNow() {
       </div>
       <div className="book-now__background">
         <div className="book-now__book">
-          <Booking/>
+          <Search/>
           <div className="book-now__cards-back">
 
           </div>
