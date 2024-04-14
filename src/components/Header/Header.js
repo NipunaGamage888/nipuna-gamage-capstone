@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Header.scss";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [userLoggedIn, setIsUserLoggedIn] = useState(true);
+
+  const navigate = useNavigate()
 
   useEffect(()=>{
     const setToken=localStorage.getItem('token')
@@ -24,14 +27,14 @@ function Header() {
           <ul className="header__list">
             <li className="header__li">About Us</li>
             <li className="header__li">book now</li>
-            <li
+            <li onClick={()=>navigate('/login')}
               className={` ${
                 userLoggedIn ? "header__user-logged" : "header__li"
               }`}
             >
               login
             </li>
-            <li
+            <li onClick={()=>navigate('/login')}
               className={`header__li ${
                 userLoggedIn ? "header__li" : "header__user-logged"
               }`}

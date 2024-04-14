@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./Bookings.scss";
 
@@ -10,6 +10,8 @@ function Booking() {
   const [userId, setUserId] = useState("");
   const [vehicleNum, setVehicleNum] = useState("");
   const { id: parkingid } = useParams();
+
+  const navigate = useNavigate()
 
   const params = useParams();
 
@@ -43,7 +45,7 @@ function Booking() {
     };
 
     fetchUserId();
-  }, []);
+  }, [setUserId]);
   console.log("userID " + userId);
   const startingTimeDate = new Date(startingTime + ":00");
   const convertedTime = startingTimeDate.toISOString().slice(0, 19);
@@ -61,13 +63,27 @@ function Booking() {
       alert(
         "You have successfully Made A Booking You will get an email confirmation"
       );
+      navigate('/')
     } catch (error) {
-      console.error(error);
+      if(error.response && error.response.status === 402){
+        alert('The Time should in the limits of 30mins please enter a time ending with 30 or 00')
+      }if(error.response && error.response.status === 401){
+        alert(' Sorry there are no parking Spots available at thi time please come back another time')
+      }if(error.response && error.response.status === 405){
+        alert('please enter proper information')
+      }else{
+        console.error(error);
+      }
+      
     }
+    
   };
 
   return (
     <div className="final">
+      
+    <div className="final__form-sec">
+      <h1 className="final__heading">Book Your Spot</h1>
       <form className="final__form">
         <input
           placeholder="User Name"
@@ -95,7 +111,8 @@ function Booking() {
         />
       </form>
       <div>
-        <button onClick={handleBooking}>Book Now</button>
+        <button className="final__button" onClick={handleBooking}>Book Now</button>
+      </div>
       </div>
     </div>
   );

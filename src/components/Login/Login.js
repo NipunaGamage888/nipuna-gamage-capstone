@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import './Login.scss'
 
 function Login() {
-    const [username, setUsername] = useState(' ')
-    const [password, setPassword] = useState(' ');
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('');
       const navigate = useNavigate()
     
     
@@ -35,7 +36,7 @@ function Login() {
       </div>
       <div className="login__form-sec">
         <h2 className="login__form-sec-heading">Login</h2>
-        <form>
+        <form className="login__form">
           <input
             placeholder="User Name"
             className="login__input"
@@ -54,7 +55,7 @@ function Login() {
           />
         </form>
         <div>
-          <button type="submit" onClick={handleLogin}> Login</button>
+          <button className="login__button" type="submit" onClick={handleLogin}> Login</button>
         </div>
       </div>
     </div>
