@@ -1,37 +1,37 @@
-
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './Login.scss'
+import "./Login.scss";
 
 function Login() {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('');
-      const navigate = useNavigate()
-    
-    
-      const handleLogin = async () => {
-        try {
-          const response = await axios.post('http://localhost:8081/api/user/login', { username, password });
-          localStorage.setItem('token', response.data.token);
-          navigate('/booknow');
-          
-        } catch (error) {
-            if(error.response && error.response.status === 401){
-                alert('Incorrect User Name or password please try again')
-            }else{
-                console.error('Error submitting form:', error);
-                alert('Form submission failed. Please try again.');
-              }
-        }
-      };
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8081/api/user/login",
+        { username, password }
+      );
+      localStorage.setItem("token", response.data.token);
+      navigate("/booknow");
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        alert("Incorrect User Name or password please try again");
+      } else {
+        console.error("Error submitting form:", error);
+        alert("Form submission failed. Please try again.");
+      }
+    }
+  };
   return (
     <div className="login">
       <div className="login__intro">
         <h1 className="login__intro-heading">Welcome</h1>
         <p className="login__intro-para">
-          Login to access all features and benefits of our Website. Manage all your
-          parking in one place.
+          Login to access all features and benefits of our Website. Manage all
+          your parking in one place.
         </p>
       </div>
       <div className="login__form-sec">
@@ -43,7 +43,7 @@ function Login() {
             id="user_name"
             value={username}
             type="text"
-            onChange={(e)=>setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <input
             placeholder="Password"
@@ -51,15 +51,22 @@ function Login() {
             id="password"
             value={password}
             type="password"
-            onChange={(e)=>setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </form>
         <div>
-          <button className="login__button" type="submit" onClick={handleLogin}> Login</button>
+          <button className="login__button" type="submit" onClick={handleLogin}>
+            
+            Login
+          </button>
+        </div>
+        <div className="login__sign-forg">
+          <p onClick={()=>navigate('/signup')} className="login__signup">Create new Account? SignUp</p>
+          <p className="login__forgot">Forgot Your Password</p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

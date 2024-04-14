@@ -1,0 +1,101 @@
+.signup {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    &__intro {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      background-image: url("../../assets/login.jpg");
+      background-size: cover; /* Cover the entire container */
+      background-repeat: no-repeat; /* Prevent image from repeating */
+      background-position: center;
+    }
+    &__intro-heading {
+      margin-left: 4rem;
+      margin-top: 5rem;
+      color: white;
+      font-size: 3rem;
+      padding-bottom: 1rem;
+    }
+    &__intro-para {
+      margin-left: 4rem;
+      margin-right: 1rem;
+      color: #ffd700;
+      font-size: 2rem;
+    }
+  &__form-sec{
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      background-color: rgb(48, 45, 45);
+      width: 40%;
+      justify-content: center;
+    }&__form-sec-heading{
+      margin-left: 4rem;
+      margin-top: 5rem;
+      color: white;
+      font-size: 2.3rem;
+      padding-bottom: 1rem;
+    }&__form{
+      margin-left: 4rem;
+      margin-right: 1rem;
+      color: #ffd700;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin-right: 3rem;
+    }
+  
+    &__input {
+      border: none;
+      border-radius: 2px;
+      font-size: 1.2rem;
+      color: #ffd700;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      margin-bottom: 1rem;
+  
+      &::placeholder {
+        color: #ffd700;
+      }
+    }
+    &__button {
+      background-color: #ffd700;
+      border: none;
+      font-size: 1.2rem;
+      height: 3rem;
+      border-radius: 5px;
+      width: 10rem;
+    
+    }
+    &__toggle{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    &__button-toggle{
+        background-color: grey;
+        border: none;
+        font-size: 1.2rem;
+        height: 3rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 10rem;
+    
+    &:first-child{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    &.active{
+        background-color: #ffd700;
+    }
+    }
+  }
+  
