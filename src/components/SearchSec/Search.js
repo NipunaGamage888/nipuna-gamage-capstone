@@ -27,7 +27,7 @@ function Booking() {
       console.error(error);
     }
   };
-console.log(parkingLots)
+
   const booking=(parkingLot)=>{
     const storedToken = localStorage.getItem("token");
     if (!storedToken) {

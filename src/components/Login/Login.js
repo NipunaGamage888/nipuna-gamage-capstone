@@ -25,20 +25,20 @@ function Login() {
         }
       };
   return (
-    <div>
-      <div>
-        <h1>Welcome</h1>
-        <p>
+    <div className="login">
+      <div className="login__intro">
+        <h1 className="login__intro-heading">Welcome</h1>
+        <p className="login__intro-para">
           Login to access all features and benefits of our Website. Manage all your
           parking in one place.
         </p>
       </div>
-      <div>
-        <h2>Login</h2>
+      <div className="login__form-sec">
+        <h2 className="login__form-sec-heading">Login</h2>
         <form>
           <input
             placeholder="User Name"
-            className="book-form__input"
+            className="login__input"
             id="user_name"
             value={username}
             type="text"
@@ -46,7 +46,7 @@ function Login() {
           />
           <input
             placeholder="Password"
-            className="book-form__input"
+            className="login__input"
             id="password"
             value={password}
             type="password"

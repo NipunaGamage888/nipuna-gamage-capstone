@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Header.scss";
 
 function Header() {
   const [userLoggedIn, setIsUserLoggedIn] = useState(true);
+
+  useEffect(()=>{
+    const setToken=localStorage.getItem('token')
+    if(!setToken){
+      setIsUserLoggedIn(false)
+    }
+  })
+
+  const logOut =()=>{
+    localStorage.removeItem('token');
+    setIsUserLoggedIn(false);
+  }
   return (
     <header className="header">
       <div className="header__main">
@@ -21,10 +33,18 @@ function Header() {
             </li>
             <li
               className={`header__li ${
-                userLoggedIn ? "header__li" : "header__user-loggeds"
+                userLoggedIn ? "header__li" : "header__user-logged"
               }`}
             >
               Profile
+            </li>
+            <li
+            onClick={logOut}
+              className={`header__li ${
+                userLoggedIn ? "header__li" : "header__user-logged"
+              }`}
+            >
+              logout
             </li>
           </ul>
         </nav>
