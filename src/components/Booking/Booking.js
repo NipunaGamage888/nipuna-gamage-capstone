@@ -29,7 +29,7 @@ function Booking() {
               },
             }
           );
-          console.log(response);
+         
 
           setUserId(response.data.id);
         }
@@ -41,6 +41,8 @@ function Booking() {
           alert("Incorrect token");
         }
         console.error("Error fetching user ID:", error);
+
+        
       }
     };
 

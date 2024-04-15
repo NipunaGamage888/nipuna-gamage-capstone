@@ -191,7 +191,7 @@ function Signup() {
                 )}
                 {registrationType === "business" && (
                     <form className="signup__form">
-                    {/* User registration fields */}
+                   
                     <input
                         placeholder="Parking Name"
                         className="signup__input"
