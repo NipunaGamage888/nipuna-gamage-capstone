@@ -35,7 +35,7 @@ List the functionality that your app will include. These can be written as user 
 
 List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
 
- -React
+- React
 - Javascript
 - MySQL
 - Express
@@ -69,10 +69,15 @@ payment page
 ### Mockups
 
 Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
+## Homepage
 ![](./assets/Home.png)
+## Loginpage
 ![](./assets/LoginUser.png)
+## signin page
 ![](./assets/Register.png)
+## Resgister parking space
 ![](./assets/Registerparkingspace.png)
+## Booknow page
 ![](./assets/Booknowpage.png)
 
 ### Data
