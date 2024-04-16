@@ -24,9 +24,10 @@ Who will use your app? How will they use it? Any special considerations that you
 List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe 
 
 -Find the closest parking lot to my destination
--The user can login to dispute any issues and manage the parkings and accounts
+-The user can login manage the parkings and accounts dispute 
 -Parking lot owners can register there parking lots 
--User can make payments to book there parking space
+-Attendees can check for vehicles 
+-attendees can make complains
 
 
 ## Implementation
@@ -51,20 +52,22 @@ List technologies that will be used in your app, including any libraries to save
 ### APIs
 
 List any external sources of data that will be used in your app.
--OPENALPR: A API that helps to detect vehicle license plates automatically using videos
--Stripe: Payment Gateway API
 -Google Maps API: To find the proper locations
 
 ### Sitemap
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
+## Main Site
 -Homepage
 -parking page
--
-payment page
 -login
 -register for user
 -register as business
+
+## Attende Site
+-Login
+-Check 
+-Compliant
 
 ### Mockups
 
