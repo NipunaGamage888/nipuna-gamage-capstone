@@ -29,8 +29,6 @@ function Signup() {
     
       const inspectionTimeDate = new Date(formDataBusiness.inspection_date + ":00");
       const convertedTime = inspectionTimeDate.toISOString().slice(0, 19);
-      console.log(formDataBusiness)
-      
    
       const handleChange = (e) => {
         const updatedFormData = { ...formData };

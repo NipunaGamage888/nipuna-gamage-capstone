@@ -49,7 +49,7 @@ function Booking() {
 
     fetchUserId();
   }, [setUserId]);
-  console.log("userID " + userId);
+ 
   const startingTimeDate = new Date(startingTime + ":00");
   const convertedTime = startingTimeDate.toISOString().slice(0, 19);
   const convertedParkingID = parseInt(parkingid);

@@ -23,7 +23,7 @@ function Profile() {
           );
 
           setUser(response.data);
-          console.log(response)
+         
         }
       } catch (error) {
         if (error.response && error.response.status === 401) {
