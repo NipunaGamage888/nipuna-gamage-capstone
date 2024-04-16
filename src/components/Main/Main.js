@@ -12,7 +12,6 @@ function Main() {
         <img className="combine__image" src={mainImage} />
       </div>
       <div>
-        <Header />
       </div>
       <div className="combine__desc-sec">
         <p className="combine__welcome">welcome to</p>

@@ -1,0 +1,22 @@
+@use "../../styles/partials/mixings.scss" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography.scss" as *;
+
+.footer {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  background-color: rgb(48, 45, 45);
+  color: white;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.45rem;
+
+  @include tablet {
+    font-size: 1.1rem;
+    line-height: 1.64rem;
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+}

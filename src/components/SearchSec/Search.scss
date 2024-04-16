@@ -1,11 +1,17 @@
+@use "../../styles/partials/mixings.scss" as *;
 .book-form {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  @include desktop {
+    width: 100%;
+    
+  }
+
   &__main {
-    width: 80%;
+    width: 90%;
     display: flex;
     padding-bottom: 3rem;
     flex-direction: column;
@@ -14,6 +20,28 @@
     background-color: rgba(192, 192, 192, 0.5);
     border-radius: 10px;
     margin-bottom: 1.5rem;
+    @include tablet{
+      width: 80%;
+      display: flex;
+      padding-bottom: 3rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(192, 192, 192, 0.5);
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+    @include desktop {
+      width: 80%;
+      display: flex;
+      padding-bottom: 3rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(192, 192, 192, 0.5);
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
   }
   &__heading {
     font-size: 2.2rem;
@@ -43,14 +71,21 @@
   }
   &__form {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    @include tablet {
+      align-items: flex-end;
+      flex-direction: row;
+    }
   }
   &__input-sec {
-    margin-right: 2rem;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    @include tablet {
+      margin-right: 2rem;
+    }
   }
   &__input {
     border: none;
@@ -59,6 +94,16 @@
     color: #ffd700;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
+    margin-bottom: 1rem;
+    @include tablet {
+      margin-bottom: 0rem;
+      border: none;
+      border-radius: 2px;
+      font-size: 1.2rem;
+      color: #ffd700;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+    }
 
     &::placeholder {
       color: #ffd700;
@@ -70,17 +115,53 @@
     color: white;
   }
   &__available {
-    width: 80%;
-   // display: flex;
-   // flex: 1;
-   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr)); 
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    color: #ffff00; 
-    //justify-content: space-between;
-    padding: 10px;
-    text-align: center;
+    color: #ffff00;
+    padding: 2rem;
     margin-bottom: 1.5rem;
+    @include tablet{
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      color: #ffff00;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+   
   }
+  &__info-sec{
+    padding-bottom: 1rem;
+    @include tablet{
+      padding-bottom: 0;
+    }
+  }
+  &__info-heading-mobile{
+    color: #ffff00;
+    display: grid;
+    font-size: 1.4rem;
+    @include tablet{
+      display: none;
+    }}
+    &__info-heading{
+      display: none;
+
+      @include tablet{
+        display: grid;
+        font-size: 1.8rem;
+      }
+    }
+    &__info-para{
+      font-size: 1rem;
+      color: white;
+      @include tablet{
+        font-size: 1.5rem;
+      }
+    }
+  
 }

@@ -3,8 +3,8 @@
       "id": 1,
       "heading": "Attendance For support",
       "imageUrl": "image1.jpg",
-      "paragraphs1": "This is the first paragraph of card 1.",
-      "paragraph2":"This is the second paragraph of card 1."
+      "paragraphs1": "  Our attentive staff ensures seamless parking experiences.",
+      "paragraph2":"Need assistance? Our team is here to help."
         
       
     },
@@ -12,32 +12,32 @@
       "id": 2,
       "heading": "Trained security professional for Anti Theft",
       "imageUrl": "image2.jpg",
-      "paragraphs1": "This is the first paragraph of card 1.",
-      "paragraph2":"This is the second paragraph of card 1."
+      "paragraphs1": "Highly trained security ensures vehicle safety.",
+      "paragraph2":"Advanced surveillance deters unauthorized access and theft."
         
     },
     {
         "id": 3,
         "heading": "spacious Parking",
         "imageUrl": "image2.jpg",
-        "paragraphs1": "This is the first paragraph of card 1.",
-        "paragraph2":"This is the second paragraph of card 1."
+        "paragraphs1": "Ample parking space for your convenience.",
+        "paragraph2":"Avoid congestion with our expansive parking facilities."
           
       },
       {
         "id": 4,
         "heading": "Mechanical Support when needed",
         "imageUrl": "image2.jpg",
-        "paragraphs1": "This is the first paragraph of card 1.",
-        "paragraph2":"This is the second paragraph of card 1."
+        "paragraphs1": "    Mechanical assistance available whenever required.",
+        "paragraph2":"Count on us for prompt support with vehicle issues."
           
       },
       {
         "id": 5,
         "heading": "Secure Payment Methods",
         "imageUrl": "image2.jpg",
-        "paragraphs1": "This is the first paragraph of card 1.",
-        "paragraph2":"This is the second paragraph of card 1."
+        "paragraphs1": "    Safe and secure payment options for convenience.",
+        "paragraph2":"Protect your financial information with our trusted methods."
           
       }
   ]

@@ -70,16 +70,19 @@ function Booking() {
       {parkingLots.length > 0 ? (
         parkingLots.map((parkingLot) => (
           <section className="book-form__available" key={parkingLot.id}>
-            <div>
+            <div className="book-form__info-sec">
               <h2 className="book-form__info-heading">Parking Lot Name</h2>
+              <h2 className="book-form__info-heading-mobile">Name</h2>
               <p className="book-form__info-para">{parkingLot.parking_name}</p>
             </div>
-            <div>
+            <div className="book-form__info-sec">
               <h2 className="book-form__info-heading">Parking Lot address</h2>
+              <h2 className="book-form__info-heading-mobile">address</h2>
               <p className="book-form__info-para">{parkingLot.address}</p>
             </div>
-            <div>
+            <div className="book-form__info-sec">
               <h2 className="book-form__info-heading">Parking Spaces</h2>
+              <h2 className="book-form__info-heading-mobile">Spaces</h2>
               <p className="book-form__info-para">{parkingLot.parking_spaces}</p>
             </div>
             <div>

@@ -11,7 +11,6 @@ function BookNow() {
         <img className="book-now__image" src={mainImage} />
       </div>
       <div>
-        <Header />
       </div>
       <div className="book-now__desc-sec">
         <p className="book-now__welcome">welcome to</p>

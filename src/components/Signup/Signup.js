@@ -104,7 +104,7 @@ function Signup() {
         </p>
       </div>
       <div className="signup__form-sec">
-        <h2 className="signup__form-sec-heading"> SignUp</h2>
+        
         
                 <div className="signup__toggle">
                     <button
@@ -120,6 +120,7 @@ function Signup() {
                         Business
                     </button>
                 </div>
+                <h2 className="signup__form-sec-heading"> SignUp</h2>
                 {registrationType === "user" && (
                     <form className="signup__form">
                         {/* User registration fields */}

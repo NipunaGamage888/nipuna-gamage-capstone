@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./Bookings.scss";
+import Header from "../Header/Header";
 
 function Booking() {
   const [startingTime, setStartingTime] = useState("");
@@ -42,7 +43,7 @@ function Booking() {
         }
         console.error("Error fetching user ID:", error);
 
-        
+
       }
     };
 
@@ -83,7 +84,7 @@ function Booking() {
 
   return (
     <div className="final">
-      
+    
     <div className="final__form-sec">
       <h1 className="final__heading">Book Your Spot</h1>
       <form className="final__form">
@@ -96,9 +97,9 @@ function Booking() {
           onChange={(e) => setStartingTime(e.target.value)}
         />
         <input
-          placeholder="Password"
+          placeholder="Enter the Hours"
           className="final__input"
-          id="password"
+          id="hours"
           value={hours}
           type="number"
           onChange={(e) => setHours(e.target.value)}
