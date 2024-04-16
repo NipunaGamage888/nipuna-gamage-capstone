@@ -8,7 +8,7 @@ function BookNow() {
   return (
     <main className="book-now">
       <div className="book-now__main">
-        <img className="book-now__image" src={mainImage} />
+        <img className="book-now__image" alt='Backgound image of a parking lot and a car' src={mainImage} />
       </div>
       <div>
       </div>

@@ -9,7 +9,7 @@ function Main() {
   return (
     <main className="combine">
       <div className="combine__main">
-        <img className="combine__image" src={mainImage} />
+        <img className="combine__image" alt="Background image of a car or a parking lot" src={mainImage} />
       </div>
       <div>
       </div>

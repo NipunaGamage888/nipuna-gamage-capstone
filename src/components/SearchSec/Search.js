@@ -91,7 +91,7 @@ function Booking() {
           </section>
         ))
       ) : (
-        <p>No inventories Available in this warehouse</p>
+        <p>No parking spots available here</p>
       )}
     </section>
   );

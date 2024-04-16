@@ -24,7 +24,7 @@ function Card() {
       <div className="card__cards-sec">
         {cardData.map((card) => (
           <article key={card.id} className="card__main">
-            <img src={mainImage} className="card__img" />
+            <img src={mainImage} alt="Images of seperate cards according to their topic" className="card__img" />
             <h1 className="card__heading">
               {card.heading}
               {/*Security gurad
