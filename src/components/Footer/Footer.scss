@@ -3,6 +3,8 @@
 @use "../../styles/partials/typography.scss" as *;
 
 .footer {
+  position: relative;
+  bottom: 0;
   padding-bottom: 4rem;
   padding-top: 4rem;
   background-color: rgb(48, 45, 45);

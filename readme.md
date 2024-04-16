@@ -210,6 +210,12 @@ POST /parking-lots/register
 
 JWT auth 
 
+### How to Run
+
+-To run the user will need agoogle map key
+-nodemodules installed
+JWT key
+
 ## Roadmap
 
 Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation. Think about what you can reasonably complete before the due date. The more detail you provide, the easier it will be to build.
@@ -231,9 +237,12 @@ Demo Date
 
 Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
 
-Would be nics to have a method to get street parkings to the website so people can book street parking spots as well
+Would be nice to have a method to get street parkings to the website so people can book street parking spots as well
 Monthly or yearly pass for daily users
 User Rating system for each parking lot
 A system to identify the traffic around the parking lot
 Create a mobile application
+A image processing system so that it will reduce attendee work
+Payment Methods
+
 
