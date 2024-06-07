@@ -25,15 +25,14 @@ function Card() {
         {cardData.map((card) => (
           <article key={card.id} className="card__main">
             <img src={mainImage} alt="Images of seperate cards according to their topic" className="card__img" />
+            <div className="card__cards-info-wrap">
             <h1 className="card__heading">
               {card.heading}
-              {/*Security gurad
-                //spacious
-                mechanical support when needed
-             Secure payment methods*/}
             </h1>
             <p className="card__para">{card.paragraphs1}</p>
             <p className="card__para">{card.paragraph2}</p>
+            </div>
+            
           </article>
         ))}
       </div>

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./Bookings.scss";
 import Header from "../Header/Header";
+import Payment from "../Payment/Payment";
 
 function Booking() {
   const [startingTime, setStartingTime] = useState("");
@@ -11,10 +12,25 @@ function Booking() {
   const [userId, setUserId] = useState("");
   const [vehicleNum, setVehicleNum] = useState("");
   const { id: parkingid } = useParams();
+  const [price, setPrice]=useState("")
+  const[rate,setRate]=useState('')
 
   const navigate = useNavigate()
 
-  const params = useParams();
+  const changeHours =(e)=>{
+    setHours(e.target.value)
+    const price=e.target.value;
+    const convPrice=Number(price)
+    const convRate=Number(rate)
+   console.log(convPrice*convRate)
+   const finalPrice=convPrice*convRate
+   if (!isNaN(finalPrice)) {
+ 
+    setPrice(finalPrice);
+  } else {
+    setPrice(0); // Default to 0 if the input is invalid
+  }
+  }
 
   useEffect(() => {
     const fetchUserId = async () => {
@@ -52,9 +68,24 @@ function Booking() {
  
   const startingTimeDate = new Date(startingTime + ":00");
   const convertedTime = startingTimeDate.toISOString().slice(0, 19);
-  const convertedParkingID = parseInt(parkingid);
+  const convertedParkingID = Number(parkingid);
+  useEffect(()=>{
+    const fetchParking= async()=>{
+      try{
+        const response=await axios.get(
+          `http://localhost:8081/api/parking/rate/${parkingid}`
+        )
+        console.log(response.data[0].rate)
+        setRate(response.data[0].rate)
+      }catch (error) {
+        console.error( error,"This is my error");
+  
+  
+      }
+    }; fetchParking();
+  },[])
 
-  const handleBooking = async () => {
+  /*const handleBooking = async () => {
     try {
       await axios.post("http://localhost:8081/api/booking/confirm", {
         user_id: userId,
@@ -80,7 +111,8 @@ function Booking() {
       
     }
     
-  };
+  };*/
+  
 
   return (
     <div className="final">
@@ -102,7 +134,7 @@ function Booking() {
           id="hours"
           value={hours}
           type="number"
-          onChange={(e) => setHours(e.target.value)}
+          onChange={changeHours}
         />
         <input
           placeholder="vehicle Number"
@@ -114,8 +146,10 @@ function Booking() {
         />
       </form>
       <div>
-        <button className="final__button" onClick={handleBooking}>Book Now</button>
+        <Payment user={userId} price={price}/>
       </div>
+      <p className="final__price">
+          Price For Your Booking Will be: {price}</p>
       </div>
     </div>
   );

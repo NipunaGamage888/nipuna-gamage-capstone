@@ -3,7 +3,7 @@
       "id": 1,
       "heading": "Attendance For support",
       "imageUrl": "image1.jpg",
-      "paragraphs1": "  Our attentive staff ensures seamless parking experiences.",
+      "paragraphs1": "Our attentive staff ensures seamless parking experiences.",
       "paragraph2":"Need assistance? Our team is here to help."
         
       
@@ -28,7 +28,7 @@
         "id": 4,
         "heading": "Mechanical Support when needed",
         "imageUrl": "image2.jpg",
-        "paragraphs1": "    Mechanical assistance available whenever required.",
+        "paragraphs1": "Mechanical assistance available whenever required.",
         "paragraph2":"Count on us for prompt support with vehicle issues."
           
       },
@@ -36,7 +36,7 @@
         "id": 5,
         "heading": "Secure Payment Methods",
         "imageUrl": "image2.jpg",
-        "paragraphs1": "    Safe and secure payment options for convenience.",
+        "paragraphs1": "Safe and secure payment options for convenience.",
         "paragraph2":"Protect your financial information with our trusted methods."
           
       }

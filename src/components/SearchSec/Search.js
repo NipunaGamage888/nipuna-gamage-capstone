@@ -85,6 +85,11 @@ function Booking() {
               <h2 className="book-form__info-heading-mobile">Spaces</h2>
               <p className="book-form__info-para">{parkingLot.parking_spaces}</p>
             </div>
+            <div className="book-form__info-sec">
+              <h2 className="book-form__info-heading">Hourly Rate</h2>
+              <h2 className="book-form__info-heading-mobile">Rate</h2>
+              <p className="book-form__info-para">{parkingLot.rate}</p>
+            </div>
             <div>
               <button onClick={()=>booking(parkingLot.id)} className="book-form__button">Book Now</button>
             </div>

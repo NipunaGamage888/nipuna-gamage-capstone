@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "heading": "Premium Package",
+    "imageUrl": "image1.jpg",
+    "paragraphs1": [
+      "15% off of all your bookings for one year",
+      "Immediate free assistamce with vehicle emmergencies"
+    ],
+    "paragraph2": "Need assistance? Our team is here to help."
+  },
+  {
+    "id": 2,
+    "heading": "Gold Package",
+    "imageUrl": "image2.jpg",
+    "paragraphs1": [
+      "10% off of all your bookings for 6 months",
+      "Immediate free assistamce with vehicle emmergencies"
+    ],
+    "paragraph2": "Advanced surveillance deters unauthorized access and theft."
+  },
+  {
+    "id": 3,
+    "heading": "Silver",
+    "imageUrl": "image2.jpg",
+    "paragraphs1": [
+      "5% off of all your bookings for 3 months",
+      "Immediate free assistamce with vehicle emmergencies"
+    ],
+    "paragraph2": "Avoid congestion with our expansive parking facilities."
+  }
+]

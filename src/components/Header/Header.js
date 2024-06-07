@@ -23,6 +23,7 @@ function Header() {
   const logOut = () => {
     localStorage.removeItem("token");
     setIsUserLoggedIn(false);
+    navigate('/')
   };
   return (
     <header className="header">
@@ -51,6 +52,14 @@ function Header() {
                 }`}
               >
                 Profile
+              </li>
+              <li
+                onClick={()=>navigate('/loyalty')}
+                className={`header__li-mobile ${
+                  userLoggedIn ? "header__li-mobile" : "header__user-logged"
+                }`}
+              >
+                Loyalty
               </li>
               <li
                 onClick={logOut}
@@ -83,6 +92,14 @@ function Header() {
               }`}
             >
               Profile
+            </li>
+            <li
+              onClick={() => navigate("/loyalty")}
+              className={`header__li ${
+                userLoggedIn ? "header__li" : "header__user-logged"
+              }`}
+            >
+             Loyalty
             </li>
             <li
               onClick={logOut}

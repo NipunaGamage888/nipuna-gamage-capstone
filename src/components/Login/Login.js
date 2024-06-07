@@ -15,7 +15,8 @@ function Login() {
         { username, password }
       );
       localStorage.setItem("token", response.data.token);
-      navigate("/booknow");
+      navigate("/");
+      window.location.reload();
     } catch (error) {
       if (error.response && error.response.status === 401) {
         alert("Incorrect User Name or password please try again");
