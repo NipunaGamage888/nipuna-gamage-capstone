@@ -3,6 +3,7 @@
     "id": 1,
     "heading": "Premium Package",
     "imageUrl": "image1.jpg",
+    "price":50,
     "paragraphs1": [
       "15% off of all your bookings for one year",
       "Immediate free assistamce with vehicle emmergencies"
@@ -13,6 +14,7 @@
     "id": 2,
     "heading": "Gold Package",
     "imageUrl": "image2.jpg",
+    "price":30,
     "paragraphs1": [
       "10% off of all your bookings for 6 months",
       "Immediate free assistamce with vehicle emmergencies"
@@ -23,6 +25,7 @@
     "id": 3,
     "heading": "Silver",
     "imageUrl": "image2.jpg",
+    "price":20,
     "paragraphs1": [
       "5% off of all your bookings for 3 months",
       "Immediate free assistamce with vehicle emmergencies"

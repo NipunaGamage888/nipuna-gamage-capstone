@@ -1,14 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Loyalty.scss";
 import loyaltyData from "../../Data/LoyaltyData.json";
 import mainImage from "../../assets/mainImage.webp";
+import Payment from "../Payment/Payment";
+import axios from "axios";
 
 function Loyalty() {
   const [showInfo, setShowInfo] = useState(false);
+  const [userId,setUserId]=useState('')
 
-  const showMore=()=>{
-    setShowInfo((prev)=>!prev)
-  }
+  const showMore = () => {
+    
+    setShowInfo((prev) => !prev);
+  };
+  useEffect(() => {
+    const fetchUserId = async () => {
+        const token= localStorage.getItem("token")
+      try {
+        if (token) {
+          const response = await axios.get(
+            "http://localhost:8081/api/user/profile",
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+
+          setUserId(response.data.id);
+        }
+      } catch (error) {
+        if (error.response && error.response.status === 401) {
+          alert("token not provided");
+        }
+        if (error.response && error.response.status === 403) {
+          alert("Incorrect token");
+        }
+        console.error("Error fetching user ID:", error);
+      }
+    };fetchUserId()
+  },[setUserId]);
   return (
     <section className="loyalty">
       <div className="loyalty__about">
@@ -36,23 +67,25 @@ function Loyalty() {
             />
             <div className="loyalty__loyaltys-info-wrap">
               <h1 className="loyalty__heading">{loyalty.heading}</h1>
-              
+
               <ul>
                 {loyalty.paragraphs1.map((line) => (
-                  <p className="loyalty__para"
-                   
-                  >
-                    {line}
-                  </p>
+                  <p className="loyalty__para">{line}</p>
                 ))}
               </ul>
-              <p  className={` ${
-                      showInfo ? "loyalty__open-info" : "loyalty__close-info"
-                    }`}>{loyalty.paragraph2}</p>
+              <p
+                className={` ${
+                  showInfo ? "loyalty__open-info" : "loyalty__close-info"
+                }`}
+              >
+                {loyalty.paragraph2}
+              </p>
             </div>
-            <div>
-              <button className="loyalty__button" onClick={showMore}>More Details</button>
-              <button className="loyalty__button">Purchase</button>
+            <div className="loyalty__button-sec">
+              <button className="loyalty__button" onClick={showMore}>
+                More Details
+              </button>
+              <Payment color="finalButtonBlack"  user={userId} price={loyalty.price}/>
             </div>
           </article>
         ))}

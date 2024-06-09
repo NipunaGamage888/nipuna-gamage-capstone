@@ -146,7 +146,7 @@ function Booking() {
         />
       </form>
       <div>
-        <Payment user={userId} price={price}/>
+        <Payment color='finalButtonYellow' user={userId} price={price}/>
       </div>
       <p className="final__price">
           Price For Your Booking Will be: {price}</p>

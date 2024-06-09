@@ -162,6 +162,9 @@
       max-width: 100%;
     }
   }
+  &__button-sec{
+    display: flex;
+  }
   &__button {
     background-color: rgba(0, 0, 0, 0.1);
     border: none;
