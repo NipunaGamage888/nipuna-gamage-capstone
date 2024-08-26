@@ -67,6 +67,7 @@
     color: #fff;
     padding-right: 1rem;
   }&__li-mobile{
+
     padding-bottom: 2rem;
     list-style-type: none;
     text-decoration: none;
@@ -77,5 +78,8 @@
   }
   &__user-logged {
     display: none;
+  }
+  &__FANK{
+
   }
 }

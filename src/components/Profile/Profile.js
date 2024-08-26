@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import ProfileOpt from '../ProfileOptions/ProfileOpt'
 import axios from "axios";
 import "./profile.scss";
 
@@ -23,7 +24,6 @@ function Profile() {
           );
 
           setUser(response.data);
-         
         }
       } catch (error) {
         if (error.response && error.response.status === 401) {
@@ -40,7 +40,7 @@ function Profile() {
   }, []);
   return (
     <div className="profile">
-      <div className="profile__form-sec">
+      {/*} <div className="profile__form-sec">
         <h1 className="profile__heading">Profile</h1>
         <div className="profile__form">
           <div className="profile__details">
@@ -60,7 +60,8 @@ function Profile() {
             <p className="profile__detail-info">{user.address}</p>
           </div>
         </div>
-      </div>
+  </div>*/}
+  <ProfileOpt/>
     </div>
   );
 }

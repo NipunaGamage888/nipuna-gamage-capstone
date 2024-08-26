@@ -1,0 +1,20 @@
+.options {
+  
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  &__select{
+    background-color: rgba(192, 192, 192, 0.5);
+  }
+  &__ul{
+    list-style-type: none;
+    padding: 2rem;
+  }
+  &__li{
+    color: #ffd700;
+    font-size: 2rem;
+    padding: 1rem;
+    font-weight: 700;
+  }
+}

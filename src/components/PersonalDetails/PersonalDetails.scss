@@ -1,0 +1,72 @@
+@use '../../styles/partials/mixings.scss' as *;
+@use "../../styles/partials/typography.scss" as typo;
+
+.personal {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  &__form-sec {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    flex-direction: column;
+    justify-content: center;
+  
+    align-items: center;
+    background-color: rgba(192, 192, 192, 0.5);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    @include tablet{
+      
+    
+      flex-direction: column;
+      justify-content: center;
+     
+      align-items: center;
+      background-color: rgba(192, 192, 192, 0.5);
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+    
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+    &__heading {
+        font-size: 2.2rem;
+        padding: 2rem 0;
+        color: #ffd700;
+      }
+      &__para {
+        font-size: 1.3rem;
+        padding: 2rem 0;
+        text-align: center;
+        color: white;
+        width: 80%;
+      }
+    
+      &__button {
+        background-color: #ffd700;
+        border: none;
+        font-size: 1.2rem;
+        height: 3rem;
+        border-radius: 5px;
+        width: 10rem;
+      }
+     &__details{
+        background-color: rgba(8, 8, 8, 0.5);
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+     }&__detail-heading{
+        color: #ffd700;
+     }
+     &__detail-info{
+        color: white;
+     }
+  }
+
